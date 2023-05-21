@@ -1,9 +1,9 @@
-import { readonly_vec4 } from '../vec4/vec4.type';
+import { readonly_vec3 } from '../vec3/vec3.type';
 import { mat4 } from './mat4.type';
 
 export function mat4_from_translation(
   out: mat4,
-  v: readonly_vec4,
+  v: readonly_vec3,
 ): mat4 {
   out[0] = 1;
   out[1] = 0;

@@ -1,8 +1,7 @@
 {
-  "_name": "test",
   "name": "@lifaon/math",
-  "version": "1.0.0",
-  "description": "Description",
+  "version": "1.1.0",
+  "description": "Math helpers",
   "repository": {
     "type": "git",
     "url": "https://github.com/lifaon74/math"
@@ -11,5 +10,6 @@
   "author": "Valentin Richard",
   "license": "MIT",
   "access": "public",
+  "sideEffects": false,
   "dependencies": {}
 }
