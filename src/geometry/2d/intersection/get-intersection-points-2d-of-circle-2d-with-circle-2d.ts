@@ -1,4 +1,5 @@
 import { vec2 } from '../../../math-gl/vec2/vec2.type';
+import { math_sqrt } from '../../../others/math_sqrt';
 import { INVALID_POINT, make_point_invalid } from '../../functions/is-valid-point';
 
 // https://doubleroot.in/lessons/circle/intersection-line-circle-1/#:~:text=if%20the%20distance%20is%20less,lie%20completely%20outside%20the%20circle.
@@ -69,7 +70,7 @@ export function get_intersection_points_2d_of_circle_2d_with_circle_2d(
         const d: number = (b * b) - (4 * a * c);
 
         if (d >= 0) { // AB is intersecting with the circle
-          const sqrt_d: number = Math.sqrt(d);
+          const sqrt_d: number = math_sqrt(d);
           const p_0_y: number = (-b - sqrt_d) / (2 * a);
 
           outA[0] = (a * p_0_y * p_0_y) + (b * p_0_y) + c;
@@ -100,7 +101,7 @@ export function get_intersection_points_2d_of_circle_2d_with_circle_2d(
         const d: number = (b * b) - (4 * a * c);
 
         if (d >= 0) { // AB is intersecting with the circle
-          const sqrt_d: number = Math.sqrt(d);
+          const sqrt_d: number = math_sqrt(d);
           const p_0_x: number = (-b - sqrt_d) / (2 * a);
 
           outA[0] = p_0_x;

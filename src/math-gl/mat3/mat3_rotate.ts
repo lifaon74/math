@@ -1,3 +1,5 @@
+import { math_cos } from '../../others/math_cos';
+import { math_sin } from '../../others/math_sin';
 import { mat3, readonly_mat3 } from './mat3.type';
 
 export function mat3_rotate(
@@ -14,8 +16,8 @@ export function mat3_rotate(
     a20 = a[6],
     a21 = a[7],
     a22 = a[8],
-    s = Math.sin(rad),
-    c = Math.cos(rad);
+    s = math_sin(rad),
+    c = math_cos(rad);
 
   out[0] = c * a00 + s * a10;
   out[1] = c * a01 + s * a11;

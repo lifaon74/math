@@ -1,3 +1,6 @@
+import { math_abs } from '../../others/math_abs';
+import { math_max } from '../../others/math_max';
+import { math_sqrt } from '../../others/math_sqrt';
 import { quat } from '../quat/quat.type';
 import { vec3 } from '../vec3/vec3.type';
 import { vec3_create } from '../vec3/vec3_create';
@@ -81,7 +84,7 @@ export function mat4_decompose(
   perspectiveMatrix[11] = 0;
   perspectiveMatrix[15] = 1;
 
-  if (Math.abs(mat4_determinant(perspectiveMatrix)) < 1e-6) { // EPSILON
+  if (math_abs(mat4_determinant(perspectiveMatrix)) < 1e-6) { // EPSILON
     return false;
   }
 
@@ -169,10 +172,10 @@ export function mat4_decompose(
     r11 = row[1][1],
     r22 = row[2][2];
 
-  quaternion[0] = 0.5 * Math.sqrt(Math.max(1 + r00 - r11 - r22, 0));
-  quaternion[1] = 0.5 * Math.sqrt(Math.max(1 - r00 + r11 - r22, 0));
-  quaternion[2] = 0.5 * Math.sqrt(Math.max(1 - r00 - r11 + r22, 0));
-  quaternion[3] = 0.5 * Math.sqrt(Math.max(1 + r00 + r11 + r22, 0));
+  quaternion[0] = 0.5 * math_sqrt(math_max(1 + r00 - r11 - r22, 0));
+  quaternion[1] = 0.5 * math_sqrt(math_max(1 - r00 + r11 - r22, 0));
+  quaternion[2] = 0.5 * math_sqrt(math_max(1 - r00 - r11 + r22, 0));
+  quaternion[3] = 0.5 * math_sqrt(math_max(1 + r00 + r11 + r22, 0));
 
   if (row[2][1] > row[1][2]) {
     quaternion[0] = -quaternion[0];

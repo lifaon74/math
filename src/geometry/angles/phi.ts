@@ -1,1 +1,3 @@
-export const MATH_PHI: number = Math.PI * 2;
+import { MATH_PI } from './pi';
+
+export const MATH_PHI: number = MATH_PI * 2;

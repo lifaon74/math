@@ -1,3 +1,4 @@
+import { math_hypot } from '../../others/math_hypot';
 import { readonly_vec3 } from './vec3.type';
 
 export function vec3_length(
@@ -6,5 +7,5 @@ export function vec3_length(
   const x = a[0];
   const y = a[1];
   const z = a[2];
-  return Math.hypot(x, y, z);
+  return math_hypot(x, y, z);
 }

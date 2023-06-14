@@ -1,3 +1,4 @@
+import { math_sqrt } from '../../others/math_sqrt';
 import { readonly_vec3, vec3 } from './vec3.type';
 
 export function vec3_normalize(
@@ -11,7 +12,7 @@ export function vec3_normalize(
 
   if (len > 0) {
     //TODO: evaluate use of glm_invsqrt here?
-    len = 1 / Math.sqrt(len);
+    len = 1 / math_sqrt(len);
   }
 
   out[0] = a[0] * len;

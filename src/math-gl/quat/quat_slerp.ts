@@ -1,3 +1,5 @@
+import { math_acos } from '../../others/math_acos';
+import { math_sin } from '../../others/math_sin';
 import { quat, readonly_quat } from './quat.type';
 
 export function quat_slerp(
@@ -30,10 +32,10 @@ export function quat_slerp(
 
   if (1.0 - cosom > 1e-6) { // EPSILON
     // standard case (slerp)
-    omega = Math.acos(cosom);
-    sinom = Math.sin(omega);
-    scale0 = Math.sin((1.0 - t) * omega) / sinom;
-    scale1 = Math.sin(t * omega) / sinom;
+    omega = math_acos(cosom);
+    sinom = math_sin(omega);
+    scale0 = math_sin((1.0 - t) * omega) / sinom;
+    scale1 = math_sin(t * omega) / sinom;
   } else {
     // "from" and "to" quaternions are very close
     //  ... so we can do a linear interpolation

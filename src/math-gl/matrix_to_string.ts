@@ -1,4 +1,5 @@
 import { float_to_string } from '../float/float_to_string';
+import { math_max } from '../others/math_max';
 
 export function matrix_to_string(
   matrix: ArrayLike<number>,
@@ -9,10 +10,10 @@ export function matrix_to_string(
   const _matrix: string[] = Array.from(matrix, (value: number) => {
     return float_to_string(value, precision);
   });
-  // const maxLength: number = _matrix.reduce((maxLength: number, value: string) => Math.max(maxLength, value.length), 0);
+  // const maxLength: number = _matrix.reduce((maxLength: number, value: string) => math_max(maxLength, value.length), 0);
   const maxLengths: number[] = Array.from({ length: columnCount }, (v: any, column: number) => {
     return Array.from({ length: rowCount }, (v: any, i: number) => i).reduce((maxLength: number, row: number) => {
-      return Math.max(maxLength, _matrix[rowCount * column + row].length);
+      return math_max(maxLength, _matrix[rowCount * column + row].length);
     }, 0);
   });
 
