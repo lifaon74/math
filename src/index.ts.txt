@@ -2,3 +2,4 @@ export * from './float/index';
 export * from './geometry/index';
 export * from './math-gl/index';
 export * from './others/index';
+export * from './types/index';
