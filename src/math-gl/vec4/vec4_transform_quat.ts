@@ -1,7 +1,7 @@
+/* INFO: THIS FILE WAS HAND MADE */
+
 import { readonly_vec4, vec4 } from './vec4.type';
 import { readonly_quat } from '../quat/quat.type';
-
-/** HAND MADE **/
 
 export function vec4_transform_quat<GType extends ArrayLike<number>>(
   out: vec4<GType>,

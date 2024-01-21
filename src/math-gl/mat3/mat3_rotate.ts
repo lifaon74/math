@@ -2,6 +2,8 @@ import { math_cos } from '../../others/math_cos';
 import { math_sin } from '../../others/math_sin';
 import { mat3, readonly_mat3 } from './mat3.type';
 
+// TODO
+
 export function mat3_rotate(
   out: mat3,
   a: readonly_mat3,

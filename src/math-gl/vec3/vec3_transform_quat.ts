@@ -1,8 +1,7 @@
-import { readonly_vec3, vec3 } from './vec3.type';
-import { readonly_mat3 } from '../mat3/mat3.type';
-import { readonly_quat } from '../quat/quat.type';
+/* INFO: THIS FILE WAS HAND MADE */
 
-/** HAND MADE **/
+import { readonly_vec3, vec3 } from './vec3.type';
+import { readonly_quat } from '../quat/quat.type';
 
 export function vec3_transform_quat<GType extends ArrayLike<number>>(
   out: vec3<GType>,

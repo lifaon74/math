@@ -1,7 +1,7 @@
+/* INFO: THIS FILE WAS HAND MADE */
+
 import { readonly_mat3 } from '../mat3/mat3.type';
 import { readonly_vec2, vec2 } from './vec2.type';
-
-/** HAND MADE **/
 
 export function vec2_transform_mat3<GType extends ArrayLike<number>>(
   out: vec2<GType>,

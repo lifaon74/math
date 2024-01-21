@@ -1,3 +1,5 @@
+/* INFO: THIS FILE WAS HAND MADE */
+
 import { math_abs } from '../../others/math_abs';
 import { math_max } from '../../others/math_max';
 import { math_sqrt } from '../../others/math_sqrt';

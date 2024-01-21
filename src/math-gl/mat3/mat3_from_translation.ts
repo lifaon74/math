@@ -1,6 +1,8 @@
 import { readonly_vec2 } from '../vec2/vec2.type';
 import { mat3 } from './mat3.type';
 
+// TODO
+
 export function mat3_from_translation(
   out: mat3,
   v: readonly_vec2,

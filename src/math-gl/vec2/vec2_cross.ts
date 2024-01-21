@@ -1,7 +1,7 @@
+/* INFO: THIS FILE WAS HAND MADE */
+
 import { readonly_vec2, vec2 } from './vec2.type';
 import { vec3 } from '../vec3/vec3.type';
-
-/** HAND MADE **/
 
 export function vec2_cross<GType extends ArrayLike<number>>(
   out: vec3<GType>,

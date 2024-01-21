@@ -1,6 +1,8 @@
 import { readonly_mat4 } from '../mat4/mat4.type';
 import { mat3 } from './mat3.type';
 
+// TODO
+
 export function mat3_from_mat4(
   out: mat3,
   a: readonly_mat4,

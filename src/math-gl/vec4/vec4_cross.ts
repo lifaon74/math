@@ -1,6 +1,6 @@
-import { readonly_vec4, vec4 } from './vec4.type';
+/* INFO: THIS FILE WAS HAND MADE */
 
-/** HAND MADE **/
+import { readonly_vec4, vec4 } from './vec4.type';
 
 export function vec4_cross<GType extends ArrayLike<number>>(
   out: vec4<GType>,
