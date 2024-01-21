@@ -19,6 +19,7 @@ import { mat4_determinant } from './mat4_determinant';
 import { mat4_invert } from './mat4_invert';
 import { mat4_multiply_scalar } from './mat4_multiply_scalar';
 import { mat4_transpose } from './mat4_transpose';
+import { MATH_EPSILON } from '../../float/epsilon';
 
 // https://gist.github.com/joelambert/1117818
 // https://github.com/mattdesl/mat4-decompose/blob/master/index.js
@@ -84,7 +85,7 @@ export function mat4_decompose(
   perspectiveMatrix[11] = 0;
   perspectiveMatrix[15] = 1;
 
-  if (math_abs(mat4_determinant(perspectiveMatrix)) < 1e-6) { // EPSILON
+  if (math_abs(mat4_determinant(perspectiveMatrix)) < MATH_EPSILON) { // EPSILON
     return false;
   }
 
@@ -160,7 +161,7 @@ export function mat4_decompose(
   vec3_cross(pdum3, row[1], row[2]);
   if (vec3_dot(row[0], pdum3) < 0) {
     for (let i: number = 0; i < 3; i++) {
-      scale[i] *= -1;
+      scale[i as Extract<keyof vec3, number>] *= -1;
       row[i][0] *= -1;
       row[i][1] *= -1;
       row[i][2] *= -1;

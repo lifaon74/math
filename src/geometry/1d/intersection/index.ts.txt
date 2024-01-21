@@ -1,1 +1,0 @@
-export * from './are-line-segments-intersecting-1d';

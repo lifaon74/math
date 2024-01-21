@@ -1,7 +1,7 @@
 export const INVALID_POINT = Number.NaN;
 
-export type IPoint = [number, ...number[]] | Float32Array;
-export type IReadonlyPoint = readonly [number, ...number[]] | Float32Array;
+export type IPoint = { [0]: number };
+export type IReadonlyPoint = Readonly<IPoint>;
 
 export function make_point_invalid(
   point: IPoint,

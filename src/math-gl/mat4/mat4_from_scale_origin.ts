@@ -1,6 +1,8 @@
 import { vec3 } from '../vec3/vec3.type';
 import { mat4 } from './mat4.type';
 
+// TODO
+
 export function mat4_from_scale_origin(
   out: mat4,
   s: vec3,

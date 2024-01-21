@@ -1,1 +1,0 @@
-export * from './is-point-in-segment-1d';

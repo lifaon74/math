@@ -1,10 +1,16 @@
 {
   "name": "@lifaon/math",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Math helpers",
   "repository": {
     "type": "git",
     "url": "https://github.com/lifaon74/math"
+  },
+  "scripts": {
+    "dev": "yarn dev:bun",
+    "dev:bun": "bun --watch tools/generate-math-gl.ts",
+    "dev:deno": "deno run --watch --allow-write tools/generate-math-gl.ts ",
+    "run": "deno run --allow-write tools/generate-math-gl.ts"
   },
   "keywords": [],
   "author": "Valentin Richard",
@@ -12,6 +18,8 @@
   "access": "public",
   "sideEffects": false,
   "devDependencies": {
-    "@types/jest": "^29.5.2"
-  }
+    "@types/jest": "^29.5.11"
+  },
+  "localDependencies": [],
+  "packageManager": "yarn@4.0.2"
 }

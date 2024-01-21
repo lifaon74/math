@@ -1,9 +1,11 @@
+/* INFO: THIS FILE WAS AUTO-GENERATED - DO NOT EDIT */
+
 import { mat4, readonly_mat4 } from './mat4.type';
 
-export function mat4_copy(
-  out: mat4,
+export function mat4_copy<GType extends ArrayLike<number>>(
+  out: mat4<GType>,
   a: readonly_mat4,
-): mat4 {
+): mat4<GType> {
   out[0] = a[0];
   out[1] = a[1];
   out[2] = a[2];

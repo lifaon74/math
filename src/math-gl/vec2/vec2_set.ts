@@ -1,5 +1,7 @@
 import { vec2 } from './vec2.type';
 
+// TODO
+
 export function vec2_set(
   out: vec2,
   x: number,

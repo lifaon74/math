@@ -1,20 +1,17 @@
-import { math_sqrt } from '../../others/math_sqrt';
-import { readonly_vec2, vec2 } from './vec2.type';
+/* INFO: THIS FILE WAS AUTO-GENERATED - DO NOT EDIT */
 
-export function vec2_normalize(
-  out: vec2,
+import { vec2, readonly_vec2 } from './vec2.type';
+import { vec2_length } from './vec2_length';
+
+export function vec2_normalize<GType extends ArrayLike<number>>(
+  out: vec2<GType>,
   a: readonly_vec2,
-): vec2 {
-  const x = a[0];
-  const y = a[1];
-  let len = x * x + y * y;
-
-  if (len > 0) {
-    //TODO: evaluate use of glm_invsqrt here?
-    len = 1 / math_sqrt(len);
+): vec2<GType> {
+  let length: number = vec2_length(a);
+  if (length > 0) {
+    length = 1 / length;
   }
-
-  out[0] = a[0] * len;
-  out[1] = a[1] * len;
+  out[0] = a[0] * length;
+  out[1] = a[1] * length;
   return out;
 }

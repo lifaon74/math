@@ -1,10 +1,13 @@
+/* INFO: THIS FILE WAS AUTO-GENERATED - DO NOT EDIT */
+
 import { readonly_vec2 } from './vec2.type';
 
 export function vec2_equals(
   a: readonly_vec2,
   b: readonly_vec2,
 ): boolean {
-  return (a[0] === b[0])
+  return (
+       (a[0] === b[0])
     && (a[1] === b[1])
-    ;
+  );
 }

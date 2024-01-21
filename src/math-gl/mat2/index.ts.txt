@@ -1,2 +1,0 @@
-export * from './mat2.type';
-export * from './mat2_create';

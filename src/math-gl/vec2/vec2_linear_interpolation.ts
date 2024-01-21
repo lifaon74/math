@@ -1,13 +1,15 @@
-import { readonly_vec2, vec2 } from './vec2.type';
+/* INFO: THIS FILE WAS AUTO-GENERATED - DO NOT EDIT */
 
-export function vec2_linear_interpolation(
+import { vec2, readonly_vec2 } from './vec2.type';
+
+export function vec2_linear_interpolation<GType extends ArrayLike<number>>(
+  out: vec2<GType>,
   origin: readonly_vec2,
   target: readonly_vec2,
-  current: vec2,
-  t: number
-): void {
+  t: number,
+): vec2<GType> {
   const _t: number = 1 - t;
-
-  current[0] = (origin[0] * _t) + (target[0] * t);
-  current[1] = (origin[1] * _t) + (target[1] * t);
+  out[0] = (origin[0] * _t) + (target[0] * t);
+  out[1] = (origin[1] * _t) + (target[1] * t);
+  return out;
 }

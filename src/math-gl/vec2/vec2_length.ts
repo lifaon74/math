@@ -1,8 +1,13 @@
-import { math_hypot } from '../../others/math_hypot';
+/* INFO: THIS FILE WAS AUTO-GENERATED - DO NOT EDIT */
+
 import { readonly_vec2 } from './vec2.type';
+import { math_hypot } from '../../others/math_hypot';
 
 export function vec2_length(
   a: readonly_vec2,
 ): number {
-  return math_hypot(a[0], a[1]);
+  return math_hypot(
+    a[0],
+    a[1],
+  );
 }

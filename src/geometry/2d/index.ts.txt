@@ -1,2 +1,0 @@
-export * from './inside/index';
-export * from './intersection/index';
