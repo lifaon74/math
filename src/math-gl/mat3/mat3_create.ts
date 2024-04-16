@@ -2,6 +2,9 @@
 
 import { mat3 } from './mat3.type';
 
+/**
+ *  Creates a new mat3.
+ */
 export function mat3_create(): mat3;
 export function mat3_create<GType extends ArrayLike<number>>(
   ctor: new(size: number) => GType,

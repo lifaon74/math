@@ -2,6 +2,9 @@
 
 import { readonly_vec4 } from './vec4.type';
 
+/**
+ * Calculates the dot product of two vec4's.
+ */
 export function vec4_dot(
   a: readonly_vec4,
   b: readonly_vec4,

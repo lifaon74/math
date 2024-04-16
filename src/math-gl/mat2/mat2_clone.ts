@@ -4,6 +4,9 @@ import { mat2, readonly_mat2 } from './mat2.type';
 import { mat2_copy } from './mat2_copy';
 import { mat2_create } from './mat2_create';
 
+/**
+ * Creates a new mat2 initialized with values from an existing one.
+ */
 export function mat2_clone<GType extends ArrayLike<number>>(
   a: readonly_mat2<GType>
 ): mat2<GType> {

@@ -2,6 +2,9 @@
 
 import { mat4, readonly_mat4 } from './mat4.type';
 
+/**
+ * Subtract two mat4's (subtract `b` from `a`).
+ */
 export function mat4_subtract<GType extends ArrayLike<number>>(
   out: mat4<GType>,
   a: readonly_mat4,

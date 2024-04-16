@@ -1,3 +1,5 @@
+import { buildMathGlSet } from './shared/set/build-math-gl-set';
+import { buildMathGLVectorDistance } from './vector/distance/build-math-gl-vector-squared';
 import { getVecNName } from './vector/get-vec-n-name';
 import { getMatNName } from './matrix/get-mat-n-name';
 import { buildMathGLTypes } from './shared/types/build-math-gl-types';
@@ -16,6 +18,7 @@ import { buildMathGLVectorScale } from './vector/scale/build-math-gl-vector-scal
 import { buildMathGLEpsilonEquals } from './shared/epsilon-equals/build-math-gl-epsilon-equals';
 import { buildMathGLEquals } from './shared/equals/build-math-gl-equals';
 import { buildMathGLVectorLinearInterpolation } from './vector/linear-interpolation/build-math-gl-vector-linear-interpolation';
+import { buildMathGLVectorSquaredDistance } from './vector/squared-distance/build-math-gl-vector-squared-distance';
 import { buildMathGLVectorZero } from './vector/zero/build-math-gl-vector-zero';
 import { buildMathGLVectorNegate } from './vector/negate/build-math-gl-vector-negate';
 import { buildMathGLVectorInverse } from './vector/inverse/build-math-gl-vector-inverse';
@@ -42,6 +45,10 @@ async function buildMathGLVectors() {
       ...sharedOptions,
       type: 'vector',
     });
+    await buildMathGlSet({
+      ...sharedOptions,
+      type: 'vector',
+    });
     await buildMathGLVectorZero(sharedOptions);
     await buildMathGLCopy(sharedOptions);
     await buildMathGLClone(sharedOptions);
@@ -61,6 +68,8 @@ async function buildMathGLVectors() {
     await buildMathGLVectorNormalize(sharedOptions);
     await buildMathGLVectorDot(sharedOptions);
     await buildMathGLVectorLinearInterpolation(sharedOptions);
+    await buildMathGLVectorSquaredDistance(sharedOptions);
+    await buildMathGLVectorDistance(sharedOptions);
   }
 }
 
@@ -80,6 +89,10 @@ async function buildMathGLMatrices() {
       type: 'matrix',
     });
     await buildMathGLFromValues({
+      ...sharedOptions,
+      type: 'matrix',
+    });
+    await buildMathGlSet({
       ...sharedOptions,
       type: 'matrix',
     });

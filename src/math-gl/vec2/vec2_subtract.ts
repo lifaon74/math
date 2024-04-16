@@ -2,6 +2,9 @@
 
 import { vec2, readonly_vec2 } from './vec2.type';
 
+/**
+ * Subtract two vec2's (subtract `b` from `a`).
+ */
 export function vec2_subtract<GType extends ArrayLike<number>>(
   out: vec2<GType>,
   a: readonly_vec2,

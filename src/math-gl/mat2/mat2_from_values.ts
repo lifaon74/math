@@ -2,6 +2,9 @@
 
 import { mat2 } from './mat2.type';
 
+/**
+ *  Creates a new mat2 initialized with the given values.
+ */
 export function mat2_from_values(
   m00: number,
   m01: number,

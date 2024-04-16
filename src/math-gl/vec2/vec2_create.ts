@@ -2,6 +2,9 @@
 
 import { vec2 } from './vec2.type';
 
+/**
+ *  Creates a new vec2.
+ */
 export function vec2_create(): vec2;
 export function vec2_create<GType extends ArrayLike<number>>(
   ctor: new(size: number) => GType,

@@ -2,6 +2,9 @@
 
 import { mat3, readonly_mat3 } from './mat3.type';
 
+/**
+ * Subtract two mat3's (subtract `b` from `a`).
+ */
 export function mat3_subtract<GType extends ArrayLike<number>>(
   out: mat3<GType>,
   a: readonly_mat3,

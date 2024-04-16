@@ -2,6 +2,9 @@
 
 import { vec2, readonly_vec2 } from './vec2.type';
 
+/**
+ * Performs a linear interpolation between two vec2's.
+ */
 export function vec2_linear_interpolation<GType extends ArrayLike<number>>(
   out: vec2<GType>,
   origin: readonly_vec2,

@@ -4,6 +4,9 @@ import { vec4, readonly_vec4 } from './vec4.type';
 import { vec4_copy } from './vec4_copy';
 import { vec4_create } from './vec4_create';
 
+/**
+ * Creates a new vec4 initialized with values from an existing one.
+ */
 export function vec4_clone<GType extends ArrayLike<number>>(
   a: readonly_vec4<GType>
 ): vec4<GType> {

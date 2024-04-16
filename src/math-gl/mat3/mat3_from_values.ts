@@ -2,6 +2,9 @@
 
 import { mat3 } from './mat3.type';
 
+/**
+ *  Creates a new mat3 initialized with the given values.
+ */
 export function mat3_from_values(
   m00: number,
   m01: number,

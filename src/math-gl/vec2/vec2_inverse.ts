@@ -2,6 +2,9 @@
 
 import { vec2, readonly_vec2 } from './vec2.type';
 
+/**
+ * Returns the inverse of the components of a  vec2.
+ */
 export function vec2_inverse<GType extends ArrayLike<number>>(
   out: vec2<GType>,
   a: readonly_vec2,

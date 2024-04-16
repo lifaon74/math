@@ -2,6 +2,9 @@
 
 import { vec2, readonly_vec2 } from './vec2.type';
 
+/**
+ * Divides two vec2's.
+ */
 export function vec2_divide<GType extends ArrayLike<number>>(
   out: vec2<GType>,
   a: readonly_vec2,

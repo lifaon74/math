@@ -3,6 +3,9 @@
 import { vec3, readonly_vec3 } from './vec3.type';
 import { vec3_length } from './vec3_length';
 
+/**
+ * Normalize a  vec3.
+ */
 export function vec3_normalize<GType extends ArrayLike<number>>(
   out: vec3<GType>,
   a: readonly_vec3,

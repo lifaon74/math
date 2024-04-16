@@ -2,6 +2,9 @@
 
 import { mat2 } from './mat2.type';
 
+/**
+ *  Creates a new mat2.
+ */
 export function mat2_create(): mat2;
 export function mat2_create<GType extends ArrayLike<number>>(
   ctor: new(size: number) => GType,

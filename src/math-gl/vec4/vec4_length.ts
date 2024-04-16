@@ -3,6 +3,9 @@
 import { readonly_vec4 } from './vec4.type';
 import { math_hypot } from '../../others/math_hypot';
 
+/**
+ * Calculates the length of a vec4.
+ */
 export function vec4_length(
   a: readonly_vec4,
 ): number {

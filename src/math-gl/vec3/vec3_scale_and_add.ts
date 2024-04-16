@@ -2,6 +2,9 @@
 
 import { vec3, readonly_vec3 } from './vec3.type';
 
+/**
+ * Adds two vec3's after scaling the second operand by a scalar value.
+ */
 export function vec3_scale_and_add<GType extends ArrayLike<number>>(
   out: vec3<GType>,
   a: readonly_vec3,

@@ -2,6 +2,9 @@
 
 import { vec2, readonly_vec2 } from './vec2.type';
 
+/**
+ * Multiplies two vec2's.
+ */
 export function vec2_multiply<GType extends ArrayLike<number>>(
   out: vec2<GType>,
   a: readonly_vec2,

@@ -2,6 +2,9 @@
 
 import { vec4, readonly_vec4 } from './vec4.type';
 
+/**
+ * Copy the values from one vec4 to another.
+ */
 export function vec4_copy<GType extends ArrayLike<number>>(
   out: vec4<GType>,
   a: readonly_vec4,

@@ -2,6 +2,9 @@
 
 import { vec4 } from './vec4.type';
 
+/**
+ *  Creates a new vec4 initialized with the given values.
+ */
 export function vec4_from_values(
   x: number,
   y: number,

@@ -2,6 +2,9 @@
 
 import { mat3, readonly_mat3 } from './mat3.type';
 
+/**
+ * Copy the values from one mat3 to another.
+ */
 export function mat3_copy<GType extends ArrayLike<number>>(
   out: mat3<GType>,
   a: readonly_mat3,

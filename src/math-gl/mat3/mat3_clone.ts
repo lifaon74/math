@@ -4,6 +4,9 @@ import { mat3, readonly_mat3 } from './mat3.type';
 import { mat3_copy } from './mat3_copy';
 import { mat3_create } from './mat3_create';
 
+/**
+ * Creates a new mat3 initialized with values from an existing one.
+ */
 export function mat3_clone<GType extends ArrayLike<number>>(
   a: readonly_mat3<GType>
 ): mat3<GType> {

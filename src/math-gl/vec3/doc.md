@@ -1,1 +1,1 @@
-https://github.com/toji/gl-matrix/blob/master/src/vec33.js
+https://github.com/toji/gl-matrix/blob/master/src/vec3.js

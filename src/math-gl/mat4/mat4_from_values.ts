@@ -2,6 +2,9 @@
 
 import { mat4 } from './mat4.type';
 
+/**
+ *  Creates a new mat4 initialized with the given values.
+ */
 export function mat4_from_values(
   m00: number,
   m01: number,

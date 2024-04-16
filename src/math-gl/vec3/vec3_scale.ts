@@ -2,6 +2,9 @@
 
 import { vec3, readonly_vec3 } from './vec3.type';
 
+/**
+ * Scales a vec3 by a scalar number.
+ */
 export function vec3_scale<GType extends ArrayLike<number>>(
   out: vec3<GType>,
   a: readonly_vec3,

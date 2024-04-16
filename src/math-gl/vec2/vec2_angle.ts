@@ -8,6 +8,9 @@ import { math_acos } from '../../others/math_acos';
 import { math_min } from '../../others/math_min';
 import { math_max } from '../../others/math_max';
 
+/**
+ * Returns the angle between two vec2's.
+ */
 export function vec2_angle(
   a: readonly_vec2,
   b: readonly_vec2,

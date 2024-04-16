@@ -2,6 +2,9 @@
 
 import { readonly_vec3 } from './vec3.type';
 
+/**
+ *  Returns whether or not the vec3's have exactly the same elements in the same position.
+ */
 export function vec3_equals(
   a: readonly_vec3,
   b: readonly_vec3,

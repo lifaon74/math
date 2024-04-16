@@ -2,6 +2,9 @@
 
 import { vec4, readonly_vec4 } from './vec4.type';
 
+/**
+ * Adds two vec4's.
+ */
 export function vec4_add<GType extends ArrayLike<number>>(
   out: vec4<GType>,
   a: readonly_vec4,

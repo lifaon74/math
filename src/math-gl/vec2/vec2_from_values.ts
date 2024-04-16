@@ -2,6 +2,9 @@
 
 import { vec2 } from './vec2.type';
 
+/**
+ *  Creates a new vec2 initialized with the given values.
+ */
 export function vec2_from_values(
   x: number,
   y: number,

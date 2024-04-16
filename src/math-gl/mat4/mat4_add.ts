@@ -2,6 +2,9 @@
 
 import { mat4, readonly_mat4 } from './mat4.type';
 
+/**
+ * Adds two mat4's.
+ */
 export function mat4_add<GType extends ArrayLike<number>>(
   out: mat4<GType>,
   a: readonly_mat4,

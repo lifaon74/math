@@ -2,6 +2,9 @@
 
 import { vec4 } from './vec4.type';
 
+/**
+ * Set the components of a vec4 to zero.
+ */
 export function vec4_zero<GType extends ArrayLike<number>>(
   out: vec4<GType>,
 ): vec4<GType> {

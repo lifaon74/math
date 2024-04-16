@@ -3,6 +3,9 @@
 import { readonly_mat4 } from './mat4.type';
 import { float_equals } from '../../float/float_equals';
 
+/**
+ *  Returns whether or not the mat4's have approximately the same elements in the same position.
+ */
 export function mat4_epsilon_equals(
   a: readonly_mat4,
   b: readonly_mat4,

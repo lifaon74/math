@@ -2,6 +2,9 @@
 
 import { vec3 } from './vec3.type';
 
+/**
+ *  Creates a new vec3 initialized with the given values.
+ */
 export function vec3_from_values(
   x: number,
   y: number,

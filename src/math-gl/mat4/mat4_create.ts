@@ -2,6 +2,9 @@
 
 import { mat4 } from './mat4.type';
 
+/**
+ *  Creates a new mat4.
+ */
 export function mat4_create(): mat4;
 export function mat4_create<GType extends ArrayLike<number>>(
   ctor: new(size: number) => GType,

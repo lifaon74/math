@@ -2,6 +2,9 @@
 
 import { vec4 } from './vec4.type';
 
+/**
+ *  Creates a new vec4.
+ */
 export function vec4_create(): vec4;
 export function vec4_create<GType extends ArrayLike<number>>(
   ctor: new(size: number) => GType,

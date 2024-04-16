@@ -2,6 +2,9 @@
 
 import { mat3, readonly_mat3 } from './mat3.type';
 
+/**
+ * Adds two mat3's.
+ */
 export function mat3_add<GType extends ArrayLike<number>>(
   out: mat3<GType>,
   a: readonly_mat3,

@@ -2,6 +2,9 @@
 
 import { vec4, readonly_vec4 } from './vec4.type';
 
+/**
+ * Negates the components of a vec4.
+ */
 export function vec4_negate<GType extends ArrayLike<number>>(
   out: vec4<GType>,
   a: readonly_vec4,
