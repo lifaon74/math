@@ -1,0 +1,52 @@
+
+export abstract class NumberType {
+  #value: number;
+
+  constructor(
+    value: number,
+  ) {
+    this.#value = value;
+  }
+
+  get value(): number {
+    return this.#value;
+  }
+
+  set value(
+    value: number,
+  ) {
+    this.#value = value;
+  }
+}
+
+export class U8 extends NumberType {
+
+  constructor(
+    value: number,
+  ) {
+    super(value & 0xff);
+  }
+
+  get value(): number {
+    return super.value;
+  }
+
+  set value(
+    value: number,
+  ) {
+    super.value = value & 0xff;
+  }
+
+  add(
+    value: NumberType,
+  ): U8 {
+    return new U8(
+      this.value + value.value,
+    );
+  }
+}
+
+
+export class Vec2<GType extends NumberType> {
+  #values: GType[];
+}

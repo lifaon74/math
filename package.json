@@ -9,7 +9,11 @@
     "fb:test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "fb:test:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --collect-coverage",
     "fb:prod": "node fabrique/actions/build.js && cd dist && npm publish --access public --registry https://registry.npmjs.org",
-    "fb:dev": "node fabrique/actions/build.js --dev && cd dist && npm publish --quiet --registry http://localhost:4873"
+    "fb:dev": "node fabrique/actions/build.js --dev && cd dist && npm publish --quiet --registry http://localhost:4873",
+    "dev": "yarn dev:bun",
+    "dev:bun": "bun --watch tools/generate-math-gl.ts",
+    "dev:deno": "deno run --watch --allow-write tools/generate-math-gl.ts ",
+    "run": "deno run --allow-write tools/generate-math-gl.ts"
   },
   "description": "Math helpers",
   "keywords": [],

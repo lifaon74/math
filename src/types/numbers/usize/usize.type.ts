@@ -1,0 +1,1 @@
+export type usize = number;

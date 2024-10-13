@@ -17,8 +17,8 @@ async function build({ dev = false } = {}) {
   try {
     const [withProtected] = await Promise.all([
       buildTypescript(sourcePath),
-      // buildScss(sourcePath, destinationPath),
-      // copyOtherFiles(rootPath, destinationPath),
+      buildScss(sourcePath, destinationPath),
+      copyOtherFiles(rootPath, destinationPath),
     ]);
 
     await buildPackageJsonFile(destinationPath, {
@@ -26,7 +26,6 @@ async function build({ dev = false } = {}) {
       withProtected,
     });
   } catch (error) {
-    console.log(error);
     await removeDestination(destinationPath);
     throw error;
   }
@@ -104,7 +103,7 @@ async function buildTypescriptIndexFile(cwd = process.cwd()) {
     )
   )
     .map((path) => {
-      return `export * from './${path.slice(0, -3)}.js';`;
+      return `export * from './${path.replaceAll('\\', '/').slice(0, -3)}.js';`;
     })
     .join('\n');
 
