@@ -26,7 +26,7 @@ export function vec2_from_values(
 }
 
 
-import { f32 } from '../../types/f32.type';
+import { f32 } from '../../types/numbers/f32/f32.type';
 
 export function vec2_from_values_f32(
   x: f32,
@@ -40,7 +40,7 @@ export function vec2_from_values_f32(
 }
 
 
-import { f64 } from '../../types/f64.type';
+import { f64 } from '../../types/numbers/f64.type';
 
 export function vec2_from_values_f64(
   x: f64,
@@ -54,7 +54,7 @@ export function vec2_from_values_f64(
 }
 
 
-import { u8 } from '../../types/u8.type';
+import { u8 } from '../../types/numbers/u8/u8.type';
 
 export function vec2_from_values_u8(
   x: u8,
@@ -68,7 +68,7 @@ export function vec2_from_values_u8(
 }
 
 
-import { u16 } from '../../types/u16.type';
+import { u16 } from '../../types/numbers/u16/u16.type';
 
 export function vec2_from_values_u16(
   x: u16,
@@ -82,7 +82,7 @@ export function vec2_from_values_u16(
 }
 
 
-import { u32 } from '../../types/u32.type';
+import { u32 } from '../../types/numbers/u32/u32.type';
 
 export function vec2_from_values_u32(
   x: u32,
@@ -96,7 +96,7 @@ export function vec2_from_values_u32(
 }
 
 
-import { i8 } from '../../types/i8.type';
+import { i8 } from '../../types/numbers/i8.type';
 
 export function vec2_from_values_i8(
   x: i8,
@@ -110,7 +110,7 @@ export function vec2_from_values_i8(
 }
 
 
-import { i16 } from '../../types/i16.type';
+import { i16 } from '../../types/numbers/i16.type';
 
 export function vec2_from_values_i16(
   x: i16,
@@ -124,7 +124,7 @@ export function vec2_from_values_i16(
 }
 
 
-import { i32 } from '../../types/i32.type';
+import { i32 } from '../../types/numbers/i32.type';
 
 export function vec2_from_values_i32(
   x: i32,
