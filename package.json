@@ -1,25 +1,32 @@
 {
   "name": "@lifaon/math",
-  "version": "1.3.0",
-  "description": "Math helpers",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lifaon74/math"
-  },
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./index.js",
   "scripts": {
-    "dev": "yarn dev:bun",
-    "dev:bun": "bun --watch tools/generate-math-gl.ts",
-    "dev:deno": "deno run --watch --allow-write tools/generate-math-gl.ts ",
-    "run": "deno run --allow-write tools/generate-math-gl.ts"
+    "fb:build": "node fabrique/actions/build.js",
+    "fb:format": "prettier --write --ignore-unknown --config ./.prettierrc \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\"",
+    "fb:test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+    "fb:test:coverage": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --collect-coverage",
+    "fb:prod": "node fabrique/actions/build.js && cd dist && npm publish --access public --registry https://registry.npmjs.org",
+    "fb:dev": "node fabrique/actions/build.js --dev && cd dist && npm publish --quiet --registry http://localhost:4873"
   },
+  "description": "Math helpers",
   "keywords": [],
-  "author": "Valentin Richard",
+  "author": "Valentin RICHARD",
   "license": "MIT",
   "access": "public",
-  "sideEffects": false,
-  "devDependencies": {
-    "@types/jest": "^29.5.11"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lifaon74/math.git"
   },
-  "localDependencies": [],
-  "packageManager": "yarn@4.0.2"
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.6.2"
+  },
+  "packageManager": "yarn@4.5.0"
 }

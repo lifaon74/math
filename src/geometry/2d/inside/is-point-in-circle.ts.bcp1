@@ -1,9 +1,0 @@
-import { ReadonlyVec2, vec2 } from 'gl-matrix';
-
-export function isPointInCircle(
-  point: ReadonlyVec2,
-  circleCenter: ReadonlyVec2,
-  radius: number,
-): boolean {
-  return vec2.dist(point, circleCenter) <= radius;
-}
