@@ -1,30 +1,30 @@
-import { buildMathGlSet } from './shared/set/build-math-gl-set';
-import { buildMathGLVectorDistance } from './vector/distance/build-math-gl-vector-squared';
-import { getVecNName } from './vector/get-vec-n-name';
 import { getMatNName } from './matrix/get-mat-n-name';
-import { buildMathGLTypes } from './shared/types/build-math-gl-types';
-import { buildMathGLCreate } from './shared/create/build-math-gl-create';
-import { buildMathGLVectorLength } from './vector/length/build-math-gl-vector-length';
-import { buildMathGLFromValues } from './shared/from-values/build-math-gl-from-values';
-import { buildMathGLCopy } from './shared/copy/build-math-gl-copy';
-import { buildMathGLClone } from './shared/clone/build-math-gl-clone';
 import { buildMathGLAdd } from './shared/add/build-math-gl-add';
-import { buildMathGLSubtract } from './shared/subtract/build-math-gl-subtract';
-import { buildMathGLVectorMultiply } from './vector/multiply/build-math-gl-vector-multiply';
-import { buildMathGLVectorDivide } from './vector/divide/build-math-gl-vector-divide';
-import { buildMathGLVectorDot } from './vector/dot/build-math-gl-vector-dot';
-import { buildMathGLVectorNormalize } from './vector/normalize/build-math-gl-vector-normalize';
-import { buildMathGLVectorScale } from './vector/scale/build-math-gl-vector-scale';
+import { buildMathGLClone } from './shared/clone/build-math-gl-clone';
+import { buildMathGLCopy } from './shared/copy/build-math-gl-copy';
+import { buildMathGLCreate } from './shared/create/build-math-gl-create';
 import { buildMathGLEpsilonEquals } from './shared/epsilon-equals/build-math-gl-epsilon-equals';
 import { buildMathGLEquals } from './shared/equals/build-math-gl-equals';
-import { buildMathGLVectorLinearInterpolation } from './vector/linear-interpolation/build-math-gl-vector-linear-interpolation';
-import { buildMathGLVectorSquaredDistance } from './vector/squared-distance/build-math-gl-vector-squared-distance';
-import { buildMathGLVectorZero } from './vector/zero/build-math-gl-vector-zero';
-import { buildMathGLVectorNegate } from './vector/negate/build-math-gl-vector-negate';
-import { buildMathGLVectorInverse } from './vector/inverse/build-math-gl-vector-inverse';
-import { buildMathGLVectorScaleAndAdd } from './vector/scale-and-add/build-math-gl-vector-scale-and-add';
-import { buildMathGLVectorSquaredLength } from './vector/squared-length/build-math-gl-vector-squared-length';
+import { buildMathGLFromValues } from './shared/from-values/build-math-gl-from-values';
+import { buildMathGlSet } from './shared/set/build-math-gl-set';
+import { buildMathGLSubtract } from './shared/subtract/build-math-gl-subtract';
+import { buildMathGLTypes } from './shared/types/build-math-gl-types';
 import { buildMathGLVectorAngle } from './vector/angle/build-math-gl-vector-angle';
+import { buildMathGLVectorDistance } from './vector/distance/build-math-gl-vector-squared';
+import { buildMathGLVectorDivide } from './vector/divide/build-math-gl-vector-divide';
+import { buildMathGLVectorDot } from './vector/dot/build-math-gl-vector-dot';
+import { getVecNName } from './vector/get-vec-n-name';
+import { buildMathGLVectorInverse } from './vector/inverse/build-math-gl-vector-inverse';
+import { buildMathGLVectorLength } from './vector/length/build-math-gl-vector-length';
+import { buildMathGLVectorLinearInterpolation } from './vector/linear-interpolation/build-math-gl-vector-linear-interpolation';
+import { buildMathGLVectorMultiply } from './vector/multiply/build-math-gl-vector-multiply';
+import { buildMathGLVectorNegate } from './vector/negate/build-math-gl-vector-negate';
+import { buildMathGLVectorNormalize } from './vector/normalize/build-math-gl-vector-normalize';
+import { buildMathGLVectorScaleAndAdd } from './vector/scale-and-add/build-math-gl-vector-scale-and-add';
+import { buildMathGLVectorScale } from './vector/scale/build-math-gl-vector-scale';
+import { buildMathGLVectorSquaredDistance } from './vector/squared-distance/build-math-gl-vector-squared-distance';
+import { buildMathGLVectorSquaredLength } from './vector/squared-length/build-math-gl-vector-squared-length';
+import { buildMathGLVectorZero } from './vector/zero/build-math-gl-vector-zero';
 
 async function buildMathGLVectors() {
   for (let i: number = 2; i <= 4; i++) {
@@ -107,8 +107,6 @@ async function buildMathGLMatrices() {
 async function buildMathGL() {
   await buildMathGLVectors();
   await buildMathGLMatrices();
-
 }
 
 buildMathGL();
-
