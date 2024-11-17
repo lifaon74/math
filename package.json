@@ -13,7 +13,8 @@
     "fb:test": "vitest",
     "fb:test:coverage": "vitest run --coverage",
     "fb:prod": "node fabrique/actions/build.js && cd dist && npm publish --access public --registry https://registry.npmjs.org",
-    "fb:dev": "node fabrique/actions/build.js --dev && cd dist && npm publish --quiet --registry http://localhost:4873 --tag beta"
+    "fb:dev": "node fabrique/actions/build.js --dev && cd dist && npm publish --quiet --registry http://localhost:4873 --tag beta",
+    "fb:dev:public": "node fabrique/actions/build.js --dev && cd dist && npm publish --access public --registry https://registry.npmjs.org --tag beta"
   },
   "description": "Math helpers",
   "keywords": [],
@@ -32,7 +33,7 @@
   },
   "packageManager": "yarn@4.5.1",
   "fabrique": {
-    "version": "0.2.0",
+    "version": "0.2.1",
     "type": "lib"
   }
 }
