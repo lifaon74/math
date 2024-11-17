@@ -1,12 +1,14 @@
-import { IGenerateMathGLVectorDivideOptions, generateMathGLVectorDivide } from './generate-math-gl-vector-divide';
-import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file';
+import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file.js';
+import {
+  IGenerateMathGLVectorDivideOptions,
+  generateMathGLVectorDivide,
+} from './generate-math-gl-vector-divide.js';
 
-export interface IBuildMathGLVectorDivideOptions extends IGenerateMathGLVectorDivideOptions, IBaseBuildMathGLFileOptions {
-}
+export interface IBuildMathGLVectorDivideOptions
+  extends IGenerateMathGLVectorDivideOptions,
+    IBaseBuildMathGLFileOptions {}
 
-export function buildMathGLVectorDivide(
-  options: IBuildMathGLVectorDivideOptions,
-): Promise<void> {
+export function buildMathGLVectorDivide(options: IBuildMathGLVectorDivideOptions): Promise<void> {
   return buildMathGLFile({
     ...options,
     suffix: '_divide.ts',

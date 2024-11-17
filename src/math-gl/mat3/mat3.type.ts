@@ -12,6 +12,7 @@ export type mat3<GType extends ArrayLike<number> = ArrayLike<number>> = Omit<GTy
   [6]: number;
   [7]: number;
   [8]: number;
+  [index: number]: number;
 };
 
 export type readonly_mat3<GType extends ArrayLike<number> = ArrayLike<number>> = Readonly<mat3<GType>>;

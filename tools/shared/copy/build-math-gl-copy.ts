@@ -1,12 +1,11 @@
-import { IGenerateMathGLCopyOptions, generateMathGLCopy } from './generate-math-gl-copy';
-import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file';
+import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file.js';
+import { IGenerateMathGLCopyOptions, generateMathGLCopy } from './generate-math-gl-copy.js';
 
-export interface IBuildMathGLCopyOptions extends IGenerateMathGLCopyOptions, IBaseBuildMathGLFileOptions {
-}
+export interface IBuildMathGLCopyOptions
+  extends IGenerateMathGLCopyOptions,
+    IBaseBuildMathGLFileOptions {}
 
-export function buildMathGLCopy(
-  options: IBuildMathGLCopyOptions,
-): Promise<void> {
+export function buildMathGLCopy(options: IBuildMathGLCopyOptions): Promise<void> {
   return buildMathGLFile({
     ...options,
     suffix: '_copy.ts',

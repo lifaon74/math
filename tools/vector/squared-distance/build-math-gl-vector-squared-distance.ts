@@ -1,8 +1,12 @@
-import { IGenerateMathGLVectorSquaredDistanceOptions, generateMathGlVectorSquaredDistance } from './generate-math-gl-vector-squared-distance';
-import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file';
+import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file.js';
+import {
+  IGenerateMathGLVectorSquaredDistanceOptions,
+  generateMathGlVectorSquaredDistance,
+} from './generate-math-gl-vector-squared-distance.js';
 
-export interface IBuildMathGLVectorSquaredDistanceOptions extends IGenerateMathGLVectorSquaredDistanceOptions, IBaseBuildMathGLFileOptions {
-}
+export interface IBuildMathGLVectorSquaredDistanceOptions
+  extends IGenerateMathGLVectorSquaredDistanceOptions,
+    IBaseBuildMathGLFileOptions {}
 
 export function buildMathGLVectorSquaredDistance(
   options: IBuildMathGLVectorSquaredDistanceOptions,

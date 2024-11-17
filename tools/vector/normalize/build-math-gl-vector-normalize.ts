@@ -1,8 +1,12 @@
-import { IGenerateMathGLVectorNormalizeOptions, generateMathGLVectorNormalize } from './generate-math-gl-vector-normalize';
-import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file';
+import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file.js';
+import {
+  IGenerateMathGLVectorNormalizeOptions,
+  generateMathGLVectorNormalize,
+} from './generate-math-gl-vector-normalize.js';
 
-export interface IBuildMathGLVectorNormalizeOptions extends IGenerateMathGLVectorNormalizeOptions, IBaseBuildMathGLFileOptions {
-}
+export interface IBuildMathGLVectorNormalizeOptions
+  extends IGenerateMathGLVectorNormalizeOptions,
+    IBaseBuildMathGLFileOptions {}
 
 export function buildMathGLVectorNormalize(
   options: IBuildMathGLVectorNormalizeOptions,

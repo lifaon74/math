@@ -1,8 +1,12 @@
-import { IGenerateMathGLVectorLinearInterpolationOptions, generateMathGLVectorLinearInterpolation } from './generate-math-gl-vector-linear-interpolation';
-import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file';
+import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file.js';
+import {
+  IGenerateMathGLVectorLinearInterpolationOptions,
+  generateMathGLVectorLinearInterpolation,
+} from './generate-math-gl-vector-linear-interpolation.js';
 
-export interface IBuildMathGLVectorLinearInterpolationOptions extends IGenerateMathGLVectorLinearInterpolationOptions, IBaseBuildMathGLFileOptions {
-}
+export interface IBuildMathGLVectorLinearInterpolationOptions
+  extends IGenerateMathGLVectorLinearInterpolationOptions,
+    IBaseBuildMathGLFileOptions {}
 
 export function buildMathGLVectorLinearInterpolation(
   options: IBuildMathGLVectorLinearInterpolationOptions,

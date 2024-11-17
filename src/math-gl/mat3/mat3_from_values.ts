@@ -82,7 +82,7 @@ export function mat3_from_values_f32(
 }
 
 
-import { f64 } from '../../types/numbers/f64.type.js';
+import { f64 } from '../../types/numbers/f64/f64.type.js';
 
 export function mat3_from_values_f64(
   m00: f64,
@@ -194,7 +194,7 @@ export function mat3_from_values_u32(
 }
 
 
-import { i8 } from '../../types/numbers/i8.type.js';
+import { i8 } from '../../types/numbers/i8/i8.type.js';
 
 export function mat3_from_values_i8(
   m00: i8,
@@ -222,7 +222,7 @@ export function mat3_from_values_i8(
 }
 
 
-import { i16 } from '../../types/numbers/i16.type.js';
+import { i16 } from '../../types/numbers/i16/i16.type.js';
 
 export function mat3_from_values_i16(
   m00: i16,
@@ -250,7 +250,7 @@ export function mat3_from_values_i16(
 }
 
 
-import { i32 } from '../../types/numbers/i32.type.js';
+import { i32 } from '../../types/numbers/i32/i32.type.js';
 
 export function mat3_from_values_i32(
   m00: i32,

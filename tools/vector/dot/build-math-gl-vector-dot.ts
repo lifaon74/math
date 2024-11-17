@@ -1,12 +1,14 @@
-import { IGenerateMathGLVectorDotOptions, generateMathGLVectorDot } from './generate-math-gl-vector-dot';
-import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file';
+import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file.js';
+import {
+  IGenerateMathGLVectorDotOptions,
+  generateMathGLVectorDot,
+} from './generate-math-gl-vector-dot.js';
 
-export interface IBuildMathGLVectorDotOptions extends IGenerateMathGLVectorDotOptions, IBaseBuildMathGLFileOptions {
-}
+export interface IBuildMathGLVectorDotOptions
+  extends IGenerateMathGLVectorDotOptions,
+    IBaseBuildMathGLFileOptions {}
 
-export function buildMathGLVectorDot(
-  options: IBuildMathGLVectorDotOptions,
-): Promise<void> {
+export function buildMathGLVectorDot(options: IBuildMathGLVectorDotOptions): Promise<void> {
   return buildMathGLFile({
     ...options,
     suffix: '_dot.ts',

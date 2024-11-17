@@ -1,8 +1,12 @@
-import { IGenerateMathGLVectorMultiplyOptions, generateMathGLVectorMultiply } from './generate-math-gl-vector-multiply';
-import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file';
+import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file.js';
+import {
+  IGenerateMathGLVectorMultiplyOptions,
+  generateMathGLVectorMultiply,
+} from './generate-math-gl-vector-multiply.js';
 
-export interface IBuildMathGLVectorMultiplyOptions extends IGenerateMathGLVectorMultiplyOptions, IBaseBuildMathGLFileOptions {
-}
+export interface IBuildMathGLVectorMultiplyOptions
+  extends IGenerateMathGLVectorMultiplyOptions,
+    IBaseBuildMathGLFileOptions {}
 
 export function buildMathGLVectorMultiply(
   options: IBuildMathGLVectorMultiplyOptions,

@@ -1,12 +1,14 @@
-import { IGenerateMathGLSubtractOptions, generateMathGLSubtract } from './generate-math-gl-subtract';
-import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file';
+import { IBaseBuildMathGLFileOptions, buildMathGLFile } from '../../misc/build-math-gl-file.js';
+import {
+  IGenerateMathGLSubtractOptions,
+  generateMathGLSubtract,
+} from './generate-math-gl-subtract.js';
 
-export interface IBuildMathGLSubtractOptions extends IGenerateMathGLSubtractOptions, IBaseBuildMathGLFileOptions {
-}
+export interface IBuildMathGLSubtractOptions
+  extends IGenerateMathGLSubtractOptions,
+    IBaseBuildMathGLFileOptions {}
 
-export function buildMathGLSubtract(
-  options: IBuildMathGLSubtractOptions,
-): Promise<void> {
+export function buildMathGLSubtract(options: IBuildMathGLSubtractOptions): Promise<void> {
   return buildMathGLFile({
     ...options,
     suffix: '_subtract.ts',

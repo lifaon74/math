@@ -5,6 +5,7 @@ export type vec2<GType extends ArrayLike<number> = ArrayLike<number>> = Omit<GTy
   readonly length: 2;
   [0]: number;
   [1]: number;
+  [index: number]: number;
 };
 
 export type readonly_vec2<GType extends ArrayLike<number> = ArrayLike<number>> = Readonly<vec2<GType>>;

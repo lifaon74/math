@@ -1,13 +1,15 @@
-import { buildMathGLFile, IBaseBuildMathGLFileOptions } from '../../misc/build-math-gl-file';
-import { generateMathGLFromValues, IGenerateMathGLFromValuesOptions } from './generate-math-gl-from-values';
-import { generateMathGLFromValuesAlias } from './generate-math-gl-from-values-alias';
+import { buildMathGLFile, IBaseBuildMathGLFileOptions } from '../../misc/build-math-gl-file.js';
+import { generateMathGLFromValuesAlias } from './generate-math-gl-from-values-alias.js';
+import {
+  generateMathGLFromValues,
+  IGenerateMathGLFromValuesOptions,
+} from './generate-math-gl-from-values.js';
 
-export interface IBuildMathGLFromValuesOptions extends IGenerateMathGLFromValuesOptions, IBaseBuildMathGLFileOptions {
-}
+export interface IBuildMathGLFromValuesOptions
+  extends IGenerateMathGLFromValuesOptions,
+    IBaseBuildMathGLFileOptions {}
 
-export function buildMathGLFromValues(
-  options: IBuildMathGLFromValuesOptions,
-): Promise<void> {
+export function buildMathGLFromValues(options: IBuildMathGLFromValuesOptions): Promise<void> {
   return Promise.all([
     buildMathGLFile({
       ...options,
